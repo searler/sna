@@ -37,5 +37,4 @@ object WithStruct extends App {
   tm.tm_mday = 1
   cLib.printf(cLib.asctime(tm)[String])[Int]
 
-  cLib.exit(123)[Unit]
 }

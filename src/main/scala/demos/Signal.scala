@@ -32,5 +32,4 @@ object Signal extends App {
     cLib.raise(i)[Unit]
   }
 
-  cLib.exit(222)[Unit]
 }

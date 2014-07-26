@@ -28,5 +28,4 @@ object Simple extends App {
   val timer = cLib.time(0)[Long]
   cLib.printf("timer: %ld\n", timer)[Int]
 
-  cLib.exit(255)[Unit]
 }
