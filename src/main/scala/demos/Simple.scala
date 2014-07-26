@@ -25,7 +25,7 @@ object Simple extends App {
   val n = cLib.atol("0345")[Int]
   cLib.printf("atol: %ld\n", n)[Int]
 
-  val timer = cLib.time()[Int]
+  val timer = cLib.time(0)[Long]
   cLib.printf("timer: %ld\n", timer)[Int]
 
   cLib.exit(255)[Unit]
