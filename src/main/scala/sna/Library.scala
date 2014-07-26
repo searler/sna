@@ -46,14 +46,7 @@ class Library (val libName: String) extends Dynamic {
   private val functionCache = mutable.Map.empty[String, JNAFunction]
 }
 
-object Library extends App {
+object Library{
   def apply(libName: String) = new Library(libName)
-  //
-  //  Test code ...
-  //
-  val myLib = Library("c")
-  println(myLib.atol("0345")[Int])
-  println(myLib.malloc(1000)[Long])
-  myLib.printf("[printf] clock: %ld\n", myLib.clock().asInstanceOf[Int]).as[Unit]
-  myLib.printf("value: %d %f", 123, 3.12).as[Unit]
+  
 }
