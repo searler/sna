@@ -19,12 +19,7 @@ object Simple extends App {
 
   val cLib = Library("c")
 
-  val len = cLib.strcmp("Hello", "World")[Int]
-  cLib.printf("strcmp: %d\n", len)[Int]
-
-  val n = cLib.atol("0345")[Int]
-  cLib.printf("atol: %ld\n", n)[Int]
-
+  
   val timer = cLib.time(0)[Long]
   cLib.printf("timer: %ld\n", timer)[Int]
 

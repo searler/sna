@@ -19,18 +19,14 @@ import com.sun.jna.Native
 
 object TestLib extends App {
 
-  val cLib = Library("/home/rsearle/work/sna/linux-x86-64/libtestlib.so")
+  val cLib = Library("testlib")
 
   val buf = java.nio.ByteBuffer.allocate(1024).order(java.nio.ByteOrder.nativeOrder());
   val MAGIC: Byte = 'X'.asInstanceOf[Byte];
   cLib.fillInt8Buffer(buf, 10, MAGIC)[Int];
 
-  println(buf);
-
   val bytes = new Array[Byte](10);
   buf.get(bytes);
   println(new String(bytes));
-
-  println(buf);
 
 }
